@@ -86,16 +86,6 @@
     <Compile Include="Assets\SteamVR\Input\Editor\SteamVR_Input_Generator.cs" />
     <Compile Include="Assets\SteamVR\Input\Editor\SteamVR_Input_LiveWindow.cs" />
     <Compile Include="Assets\SteamVR\Input\Editor\SteamVR_Input_PostProcessBuild.cs" />
-    <Compile Include="Assets\VRTK\Editor\VRTK_AdaptiveQualityEditor.cs" />
-    <Compile Include="Assets\VRTK\Editor\VRTK_EditorUtilities.cs" />
-    <Compile Include="Assets\VRTK\Editor\VRTK_InteractHapticsEditor.cs" />
-    <Compile Include="Assets\VRTK\Editor\VRTK_ObjectSetup.cs" />
-    <Compile Include="Assets\VRTK\Editor\VRTK_PolicyListEditor.cs" />
-    <Compile Include="Assets\VRTK\Editor\VRTK_RadialMenuEditor.cs" />
-    <Compile Include="Assets\VRTK\Editor\VRTK_SDKManagerEditor.cs" />
-    <Compile Include="Assets\VRTK\Editor\VRTK_SDKSetupEditor.cs" />
-    <Compile Include="Assets\VRTK\Editor\VRTK_SupportInfoWindow.cs" />
-    <Compile Include="Assets\VRTK\Editor\VRTK_UpdatePrompt.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>/Users/weiqi/Documents/GitHub/musicgame/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
