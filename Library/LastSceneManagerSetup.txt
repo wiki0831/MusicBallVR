@@ -1,4 +1,0 @@
-sceneSetups:
-- path: Assets/VRTK/Examples/[003 - Pointers] BezierPointer.unity
-  isLoaded: 1
-  isActive: 1
