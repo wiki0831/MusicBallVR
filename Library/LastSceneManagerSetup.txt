@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/HTC.UnityPlugin/ViveInputUtility/Examples/5.ColliderEvent/ColliderEvent.unity
+- path: Assets/Scenes/VRInteraction.unity
   isLoaded: 1
   isActive: 1
