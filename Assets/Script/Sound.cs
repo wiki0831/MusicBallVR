@@ -5,7 +5,7 @@ using UnityEngine;
 public class Sound : MonoBehaviour {
 
     AudioSource audioSource;
-    public AudioClip drumSound;
+    public AudioClip sound;
 
 
     void Start()
@@ -15,8 +15,19 @@ public class Sound : MonoBehaviour {
 
     void OnCollisionEnter(Collision collision)
     {
-        float vol  = collision.relativeVelocity.magnitude * 0.2f;
+        float velocity = collision.relativeVelocity.magnitude;
+        PlaySound(velocity);
+    }
+
+    void PlaySound(float velocity)
+    {
+   
+        if (velocity > 5)
+        {
+            velocity = 5;
+        }
+        float vol = velocity * 0.2f;
         Debug.Log(vol);
-        audioSource.PlayOneShot(drumSound, vol);
+        audioSource.PlayOneShot(sound, vol);
     }
 }
