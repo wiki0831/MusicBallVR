@@ -185,6 +185,9 @@
     <Compile Include="Assets\HTC.UnityPlugin\VRModule\VRModuleDeviceState.cs" />
     <Compile Include="Assets\HTC.UnityPlugin\VRModule\VRModuleEvent.cs" />
     <Compile Include="Assets\HTC.UnityPlugin\VRModule\VRModuleManager.cs" />
+    <Compile Include="Assets\Script\ObjectDestroy.cs" />
+    <Compile Include="Assets\Script\ObjectSpawn.cs" />
+    <Compile Include="Assets\Script\Shift.cs" />
     <Compile Include="Assets\Script\Sound.cs" />
     <None Include="Assets\HTC.UnityPlugin\ViveInputUtility\Resources\Unlit-AlphaWithFade.shader" />
     <None Include="Assets\HTC.UnityPlugin\ViveInputUtility\changelog.txt" />
