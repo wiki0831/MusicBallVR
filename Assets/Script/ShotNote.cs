@@ -5,10 +5,20 @@ using UnityEngine;
 public class ShotNote : MonoBehaviour {
 
     public GameObject spawner;
-
     public GameObject spawnObj;
+    public bool randomColor = false;
+    public float hueMin = 0f;
+    public float hueMax = 1f;
+    public float saturationMin = 0f;
+    public float saturationMax = 1f;
+    public float valueMin = 0f;
+    public float valueMax = 1f;
+    public float alphaMin = 0f;
+    public float alphaMax = 1f;
 
     public float force;
+
+    public float interval;
 
     public bool toShoot;
 
@@ -23,21 +33,20 @@ public class ShotNote : MonoBehaviour {
             GameObject theOBJ;
             theOBJ = Instantiate(spawnObj, spawner.transform.position, spawner.transform.rotation) as GameObject;
 
-            Rigidbody Temporary_RigidBody;
-            Temporary_RigidBody = theOBJ.GetComponent<Rigidbody>();
+        // Add velocity to the bullet
+        theOBJ.GetComponent<Rigidbody>().velocity = theOBJ.transform.forward * force;
 
+        Color newColor = Random.ColorHSV(hueMin, hueMax, saturationMin, saturationMax, valueMin, valueMax, alphaMin, alphaMax);
+        if (randomColor == true) theOBJ.GetComponent<Renderer>().material.color = newColor;
 
-            Temporary_RigidBody.AddForce(transform.forward * force);
-
-
-            Destroy(theOBJ, 3.0f);
+        Destroy(theOBJ, 3.0f);
         }
 
 
     IEnumerator delay()
     {
         while(toShoot == true) {
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(interval);
             shot();
         }
     }
