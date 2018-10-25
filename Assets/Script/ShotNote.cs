@@ -1,20 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ShotNote : MonoBehaviour {
 
     public GameObject spawner;
     public GameObject spawnObj;
     public bool randomColor = false;
-    public float hueMin = 0f;
-    public float hueMax = 1f;
-    public float saturationMin = 0f;
-    public float saturationMax = 1f;
-    public float valueMin = 0f;
-    public float valueMax = 1f;
-    public float alphaMin = 0f;
-    public float alphaMax = 1f;
+
+    public float[] colorCode = { 0, 1, 0, 1, 0, 1, 0, 1 };
 
     public float force;
 
@@ -26,18 +22,44 @@ public class ShotNote : MonoBehaviour {
     {
         StartCoroutine(delay());
     }
+    private string colorCodeString;
+    public GameObject colorCodeStringDisp;
+
+    public void MyFunction(string MyCount)
+    {
+        if (MyCount == "CANCELED")
+        {
+            print("Canceled");
+            colorCodeString = "";
+            MyCount = "";
+        }
+
+        colorCodeString += MyCount;
+        print(colorCodeString);
+    }
+
+    void Update()
+    {
+        Text text = colorCodeStringDisp.GetComponent<Text>();
+        text.text = colorCodeString;
+    }
 
     void shot()
     {
-
             GameObject theOBJ;
             theOBJ = Instantiate(spawnObj, spawner.transform.position, spawner.transform.rotation) as GameObject;
 
         // Add velocity to the bullet
         theOBJ.GetComponent<Rigidbody>().velocity = theOBJ.transform.forward * force;
 
-        Color newColor = Random.ColorHSV(hueMin, hueMax, saturationMin, saturationMax, valueMin, valueMax, alphaMin, alphaMax);
-        if (randomColor == true) theOBJ.GetComponent<Renderer>().material.color = newColor;
+        Color newColor = Random.ColorHSV(colorCode[0], colorCode[1], colorCode[2], colorCode[3], colorCode[4], colorCode[5], colorCode[6], colorCode[7]);
+        colorCodeString = newColor.ToString();
+        colorCodeString = colorCodeString.Substring(4);
+        Debug.Log(colorCodeString);
+        if (randomColor == true) {
+            theOBJ.GetComponent<Renderer>().material.color = newColor;
+            this.GetComponent<Renderer>().material.color = newColor;
+        }
 
         Destroy(theOBJ, 3.0f);
         }

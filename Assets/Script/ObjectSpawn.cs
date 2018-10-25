@@ -9,14 +9,7 @@ public class ObjectSpawn : MonoBehaviour {
     public float interval = 1.0f;
     public bool randomColor= false;
 
-    public float hueMin = 0f;
-    public float hueMax = 1f;
-    public float saturationMin = 0f;
-    public float saturationMax = 1f;
-    public float valueMin = 0f;
-    public float valueMax = 1f;
-    public float alphaMin = 0f;
-    public float alphaMax = 1f;
+    public float[] colorCode = { 0, 1, 0, 1, 0, 1, 0, 1 };
 
     private Vector3 objPosition;
     private GameObject clonedTarget;
@@ -51,7 +44,7 @@ public class ObjectSpawn : MonoBehaviour {
         copy.transform.localPosition = objPosition;
 
         copy.name = objRespawn.name;
-        Color newColor = Random.ColorHSV(hueMin, hueMax, saturationMin, saturationMax, valueMin, valueMax, alphaMin, alphaMax);
+        Color newColor = Random.ColorHSV(colorCode[0], colorCode[1], colorCode[2], colorCode[3], colorCode[4], colorCode[5], colorCode[6], colorCode[7]);
         if (randomColor == true)copy.GetComponent<Renderer>().material.color = newColor;
 
         clonedTarget = copy;
