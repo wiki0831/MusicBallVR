@@ -29,7 +29,6 @@ public class ShotNote : MonoBehaviour {
     }
     void Update()
     {
-        delay();
         forceDisp.GetComponent<Text>().text = "Force: \n"+force.ToString();
         intervalDisp.GetComponent<Text>().text = "Interval: \n"+interval.ToString();
         toShootDisp.GetComponent<Text>().text = "To Shoot: \n"+toShoot.ToString();
@@ -57,10 +56,8 @@ public class ShotNote : MonoBehaviour {
 
     IEnumerator delay()
     {
-        while(toShoot == true) {
-            yield return new WaitForSeconds(interval);
-            shot();
-        }
+        yield return new WaitForSeconds(interval);
+        shot();
     }
 
 }
