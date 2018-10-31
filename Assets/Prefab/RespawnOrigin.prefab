@@ -36,9 +36,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1157033118486208}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -0.562, y: 1.21, z: -1.57}
+  m_LocalScale: {x: 0.8, y: 0.8000005, z: 0.8000005}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -99,14 +99,15 @@ MonoBehaviour:
   objRespawn: {fileID: 0}
   interval: 0.1
   randomColor: 1
-  hueMin: 0
-  hueMax: 1
-  saturationMin: 0.4
-  saturationMax: 0.5
-  valueMin: 0.8
-  valueMax: 1
-  alphaMin: 0
-  alphaMax: 1
+  colorCode:
+  - 0
+  - 1
+  - 1
+  - 1
+  - 0.5
+  - 1
+  - 0
+  - 1
 --- !u!135 &135693615804623912
 SphereCollider:
   m_ObjectHideFlags: 1

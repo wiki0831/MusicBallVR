@@ -54,10 +54,16 @@ public class ShotNote : MonoBehaviour {
         }
 
 
-    IEnumerator delay()
+   private IEnumerator delay()
     {
-        yield return new WaitForSeconds(interval);
-        shot();
+        while (1==1)
+        {
+            yield return new WaitForSeconds(interval);
+            if (toShoot)
+            {
+                shot();
+            }
+        }
     }
 
 }
