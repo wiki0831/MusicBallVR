@@ -314,7 +314,7 @@ Prefab:
     - target: {fileID: 64186988083021136, guid: 9c91831e2b54b5f43a5c8ef5dcb1dc86,
         type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114808103760002162, guid: 9c91831e2b54b5f43a5c8ef5dcb1dc86,
         type: 2}
@@ -322,6 +322,11 @@ Prefab:
       value: 
       objectReference: {fileID: 1099616687103694, guid: f369c79e9254eef48b2a5079506dcab6,
         type: 2}
+    - target: {fileID: 114808103760002162, guid: 9c91831e2b54b5f43a5c8ef5dcb1dc86,
+        type: 2}
+      propertyPath: randomColor
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c91831e2b54b5f43a5c8ef5dcb1dc86, type: 2}
   m_IsPrefabAsset: 0
@@ -557,6 +562,10 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: a4f19743f26f39149b985d1628d8f35a, type: 3}
+    - target: {fileID: 1050519568021662, guid: 1cec40006baae1f4a98db54032a372d3, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1cec40006baae1f4a98db54032a372d3, type: 2}
   m_IsPrefabAsset: 0
