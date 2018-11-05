@@ -20,19 +20,23 @@ public class ActiveButton : MonoBehaviour {
 
     public void OnTriggerEnter(Collider other)
     {
-        buttonObject.transform.localPosition = buttonOriginPosition + buttonDownDisplacement;
+        //if (other.gameObject.tag == "Player")
+       // {
+            //buttonObject.transform.localPosition = buttonOriginPosition + buttonDownDisplacement;
 
-        if (toControl.GetComponent<ShotNote>().toShoot == false)
-        {
-            toControl.GetComponent<ShotNote>().toShoot = true;
-        }
-        else {
-            toControl.GetComponent<ShotNote>().toShoot = false;
-        }
-          
+            if (toControl.GetComponent<ShotNote>().toShoot == false)
+            {
+                toControl.GetComponent<ShotNote>().toShoot = true;
+            }
+            else
+            {
+                toControl.GetComponent<ShotNote>().toShoot = false;
+            }
+        //}
     }
+
     public void OnTriggerExit(Collider other)
     {
-        buttonObject.localPosition = buttonOriginPosition;
+        //buttonObject.localPosition = buttonOriginPosition;
     }
 }

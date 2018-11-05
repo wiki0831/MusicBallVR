@@ -5,11 +5,11 @@ using UnityEngine;
 public class ObjectSpawn : MonoBehaviour {
 
     public GameObject effectTarget;
+    public GameObject preFab;
     public float delay = 1.0f;
 
     private Vector3 originPosition;
     private Quaternion originRotation;
-
     private GameObject clonedTarget;
 
     public bool randomColor = false;
@@ -17,6 +17,7 @@ public class ObjectSpawn : MonoBehaviour {
 
     private void Start()
     {
+        Debug.Log("START");
         clonedTarget = effectTarget;
         originPosition = effectTarget.transform.localPosition;
         originRotation = effectTarget.transform.localRotation;
@@ -26,6 +27,7 @@ public class ObjectSpawn : MonoBehaviour {
     {
         if (other.gameObject == clonedTarget)
         {
+            Debug.Log("NEW");
             StopAllCoroutines();
             StartCoroutine(CopyTarget());
         }
@@ -35,11 +37,11 @@ public class ObjectSpawn : MonoBehaviour {
     {
         yield return new WaitForSeconds(delay);
 
-        var copy = Instantiate(effectTarget);
-        copy.transform.SetParent(effectTarget.transform.parent);
+        var copy = Instantiate(preFab);
+        copy.transform.SetParent(preFab.transform.parent);
         copy.transform.localPosition = originPosition;
         copy.transform.localRotation = originRotation;
-        copy.name = effectTarget.name;
+        copy.name = preFab.name;
 
         if (randomColor == true)
         {

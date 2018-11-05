@@ -21,6 +21,8 @@ GameObject:
   - component: {fileID: 4005050164326330}
   - component: {fileID: 33388739254881898}
   - component: {fileID: 23316158533193548}
+  - component: {fileID: 136249672897742196}
+  - component: {fileID: 114204235140027806}
   m_Layer: 0
   m_Name: ButtonHead
   m_TagString: Untagged
@@ -69,7 +71,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1323518153333412}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.1, z: 0}
   m_LocalScale: {x: 0.5, y: 0.1, z: 0.5}
   m_Children: []
   m_Father: {fileID: 4083835427718896}
@@ -118,7 +120,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 09db77ecc8c98234fb99a5679a448d97, type: 2}
+  - {fileID: 2100000, guid: 04785f223d57fa440b1b5546a070be1b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -187,6 +189,22 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1975205094561120}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &114204235140027806
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1323518153333412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 079afddb0d7f05e40bcb44383f149949, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Normal: {fileID: 2100000, guid: 04785f223d57fa440b1b5546a070be1b, type: 2}
+  Heightlight: {fileID: 2100000, guid: 09db77ecc8c98234fb99a5679a448d97, type: 2}
+  Pressed: {fileID: 2100000, guid: af1f0e026d5104f44866b6f95d9bacd5, type: 2}
+  dragged: {fileID: 2100000, guid: d8df4d83465e1444f9c4c09a2c785626, type: 2}
+  heighlightButton: 0
 --- !u!114 &114740585180210598
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -214,3 +232,16 @@ CapsuleCollider:
   m_Height: 0.3
   m_Direction: 1
   m_Center: {x: 0, y: 0.07, z: 0}
+--- !u!136 &136249672897742196
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1323518153333412}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.50000024
+  m_Height: 2.0000002
+  m_Direction: 1
+  m_Center: {x: 0.00000005960466, y: 0, z: -0.00000008940699}
