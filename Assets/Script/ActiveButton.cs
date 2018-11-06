@@ -6,7 +6,7 @@ public class ActiveButton : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        buttonOriginPosition = buttonObject.localPosition;
+        //buttonOriginPosition = buttonObject.localPosition;
     }
 	
 	// Update is called once per frame
@@ -15,7 +15,7 @@ public class ActiveButton : MonoBehaviour {
 
     public Transform buttonObject;
     public Vector3 buttonDownDisplacement;
-    private Vector3 buttonOriginPosition;
+    //private Vector3 buttonOriginPosition;
     public GameObject toControl;
 
     public void OnTriggerEnter(Collider other)

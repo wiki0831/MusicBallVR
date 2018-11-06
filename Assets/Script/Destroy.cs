@@ -18,7 +18,7 @@ public class Destroy : MonoBehaviour {
 	}
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Respawn")
+        if (other.gameObject.tag == "Respawn" || other.gameObject.tag == "Sound")
         {
             other.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
             var copy = Instantiate(fire);
@@ -26,7 +26,7 @@ public class Destroy : MonoBehaviour {
             copy.transform.localPosition = new Vector3(0,0,0);
             //copy.transform.localRotation = other.transform.localRotation;
             copy.name = fire.name;
-            Destroy(other.gameObject, 5f);
+            Destroy(other.gameObject, 2f);
         }
     }
 }

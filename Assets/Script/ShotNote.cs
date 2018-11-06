@@ -16,7 +16,7 @@ public class ShotNote : MonoBehaviour {
     public float force = 10;
     public float interval = 0.5f;
     public bool toShoot = true;
-    //public float deathTime = 5f;
+    public float deathTime = 5f;
 
     public GameObject forceDisp;
     public GameObject intervalDisp;
@@ -31,7 +31,7 @@ public class ShotNote : MonoBehaviour {
     {
         forceDisp.GetComponent<Text>().text = "Force: \n"+force.ToString();
         intervalDisp.GetComponent<Text>().text = "Interval: \n"+interval.ToString();
-        toShootDisp.GetComponent<Text>().text = "To Shoot: \n"+toShoot.ToString();
+        toShootDisp.GetComponent<Text>().text = "Shoot: \n"+toShoot.ToString();
        // deathTimeDisp.GetComponent<Text>().text = "Death Time: \n"+deathTime.ToString();
     }
 
@@ -50,8 +50,8 @@ public class ShotNote : MonoBehaviour {
             theOBJ.GetComponent<Renderer>().material.color = newColor;
         }
 
-        //Destroy(theOBJ, deathTime);
-        }
+        Destroy(theOBJ, deathTime);
+    }
 
 
    private IEnumerator delay()

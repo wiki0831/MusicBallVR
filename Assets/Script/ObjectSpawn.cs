@@ -17,17 +17,17 @@ public class ObjectSpawn : MonoBehaviour {
 
     private void Start()
     {
-        Debug.Log("START");
+        //Debug.Log("START");
         clonedTarget = effectTarget;
-        originPosition = effectTarget.transform.localPosition;
-        originRotation = effectTarget.transform.localRotation;
+        originPosition = effectTarget.transform.position;
+        originRotation = effectTarget.transform.rotation;
     }
 
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject == clonedTarget)
         {
-            Debug.Log("NEW");
+            //Debug.Log("NEW");
             StopAllCoroutines();
             StartCoroutine(CopyTarget());
         }
