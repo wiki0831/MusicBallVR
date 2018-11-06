@@ -8,7 +8,8 @@ public class volumeControl : MonoBehaviour {
     public float mod;
 
     public void OnTriggerEnter(Collider other)
-    { 
+    {
+        if (other.gameObject.tag == "Player")
             sound.GetComponent<Sound>().maxVolume = sound.GetComponent<Sound>().maxVolume + mod;
     }
 }

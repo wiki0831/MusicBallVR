@@ -20,8 +20,11 @@ public class ActiveButton : MonoBehaviour {
 
     public void OnTriggerEnter(Collider other)
     {
-        //if (other.gameObject.tag == "Player")
-       // {
+        Debug.Log(other.gameObject.tag);
+        Debug.Log(other.gameObject.name);
+
+        if (other.gameObject.tag == "Player")
+        {
             //buttonObject.transform.localPosition = buttonOriginPosition + buttonDownDisplacement;
 
             if (toControl.GetComponent<ShotNote>().toShoot == false)
@@ -32,7 +35,7 @@ public class ActiveButton : MonoBehaviour {
             {
                 toControl.GetComponent<ShotNote>().toShoot = false;
             }
-        //}
+        }
     }
 
     public void OnTriggerExit(Collider other)

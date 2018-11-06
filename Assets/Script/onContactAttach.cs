@@ -20,6 +20,8 @@ public class onContactAttach : MonoBehaviour {
             Debug.Log("ATTACHED");
             transform.SetParent(collision.transform);
             GetComponent<Rigidbody>().isKinematic = true;
+
+            GetComponent<Renderer>().material.color = collision.gameObject.GetComponent<Renderer>().material.color;
         }
     }
 }

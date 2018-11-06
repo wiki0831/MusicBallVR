@@ -9,6 +9,7 @@ public class Interval : MonoBehaviour {
 
     public void OnTriggerEnter(Collider other)
     {
-        spawner.GetComponent<ShotNote>().interval = spawner.GetComponent<ShotNote>().interval + mod;
+        if (other.gameObject.tag == "Player")
+            spawner.GetComponent<ShotNote>().interval = spawner.GetComponent<ShotNote>().interval + mod;
     }
 }

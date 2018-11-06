@@ -9,6 +9,7 @@ public class Force : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        spawner.GetComponent<ShotNote>().force = spawner.GetComponent<ShotNote>().force + mod;
+        if (other.gameObject.tag == "Player")
+            spawner.GetComponent<ShotNote>().force = spawner.GetComponent<ShotNote>().force + mod;
     }
 }

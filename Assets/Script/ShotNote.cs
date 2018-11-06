@@ -31,7 +31,7 @@ public class ShotNote : MonoBehaviour {
     {
         forceDisp.GetComponent<Text>().text = "Force: \n"+force.ToString();
         intervalDisp.GetComponent<Text>().text = "Interval: \n"+interval.ToString();
-        toShootDisp.GetComponent<Text>().text = "Shoot: \n"+toShoot.ToString();
+        toShootDisp.GetComponent<Text>().text = "Shoot: "+toShoot.ToString();
        // deathTimeDisp.GetComponent<Text>().text = "Death Time: \n"+deathTime.ToString();
     }
 
