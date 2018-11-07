@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/VRInteraction.unity
+- path: Assets/HolyShift/Scenes/WaterSampleScene.unity
   isLoaded: 1
   isActive: 1
