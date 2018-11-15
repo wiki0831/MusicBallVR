@@ -29,8 +29,9 @@ public class ShotNote : MonoBehaviour {
     }
     void Update()
     {
-        forceDisp.GetComponent<Text>().text = "Force: \n"+force.ToString();
-        intervalDisp.GetComponent<Text>().text = "Interval: \n"+interval.ToString();
+        float bpm = 60 / interval;
+        forceDisp.GetComponent<Text>().text = "Force: \n"+force.ToString("0");
+        intervalDisp.GetComponent<Text>().text = "BPM: \n"+bpm.ToString("0");
         toShootDisp.GetComponent<Text>().text = "Shoot: "+toShoot.ToString();
        // deathTimeDisp.GetComponent<Text>().text = "Death Time: \n"+deathTime.ToString();
     }

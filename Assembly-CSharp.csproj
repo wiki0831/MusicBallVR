@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\ActiveButton.cs" />
+    <Compile Include="Assets\Script\colliderSound.cs" />
     <Compile Include="Assets\Script\Destroy.cs" />
     <Compile Include="Assets\Script\Force.cs" />
     <Compile Include="Assets\Script\ForceSlider.cs" />
