@@ -84,7 +84,7 @@ Material:
     - _Exposure: 1.9
     - _FogFill: 0.1
     - _FogHeight: 0.5
-    - _FogSmoothness: 0.1
+    - _FogSmoothness: 0.201
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
