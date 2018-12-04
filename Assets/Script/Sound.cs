@@ -13,18 +13,19 @@ public class Sound : MonoBehaviour {
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        volumeDisp.GetComponent<Text>().text = "Voulme: \n" + maxVolume.ToString(("0.##"));
     }
 
     private void Update()
     {
-        //volumeDisp.GetComponent<Text>().text = "Voulme: \n" + audioSource.volume.ToString();
-        volumeDisp.GetComponent<Text>().text = "Voulme: \n" + maxVolume.ToString();
+        
     }
 
     void OnCollisionEnter(Collision collision)
     { 
         float velocity = collision.relativeVelocity.magnitude;
         PlaySound(velocity);
+        volumeDisp.GetComponent<Text>().text = "Voulme: \n" + maxVolume.ToString(("0.##"));
     }
 
     void PlaySound(float velocity)
