@@ -1,5 +1,5 @@
 # MusicGame
 
-Weiqi Yuan and Xiaozhen Liu
+Weiqi Yuan
 
 wiki0831.com
